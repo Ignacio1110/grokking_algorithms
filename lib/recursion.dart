@@ -17,3 +17,22 @@ void countdown(int i) {
     countdown(i - 1);
   }
 }
+
+///階層函數
+int factorial(int x) {
+  if (x == 0) {
+    return 1;
+  } else {
+    return x * factorial(x - 1);
+  }
+}
+
+///計算陣列內每個元素的和
+///[array]為整數陣列
+int sumOfArray(List<int> array) {
+  if (array.isEmpty) {
+    return 0;
+  } else {
+    return array[0] + sumOfArray(array.sublist(1));
+  }
+}
