@@ -1,3 +1,5 @@
+import 'dart:math';
+
 part 'binary_search.dart';
 part 'selection_sort.dart';
 part 'recursion.dart';

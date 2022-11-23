@@ -9,8 +9,15 @@ List<int> quickSort(List<int> array) {
   } else {
     int pivot = array[0];
     array.removeAt(0);
-    List<int> less = array.where((element) => element <= pivot).toList();
-    List<int> greater = array.where((element) => element > pivot).toList();
+    List<int> less = [];
+    List<int> greater = [];
+    for (var num in array) {
+      if (num <= pivot) {
+        less.add(num);
+      } else {
+        greater.add(num);
+      }
+    }
     return quickSort(less) + [pivot] + quickSort(greater);
   }
 }

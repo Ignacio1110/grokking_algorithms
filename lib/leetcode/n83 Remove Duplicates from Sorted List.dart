@@ -1,5 +1,3 @@
-import 'package:test/test.dart';
-
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -36,24 +34,4 @@ class Solution {
 
     return head;
   }
-}
-
-void main() {
-  //test case
-  test("test case 1", () {
-    ListNode head = ListNode(1, ListNode(1, ListNode(2, null)));
-    Solution solution = Solution();
-
-    expect(solution.deleteDuplicates(head), ListNode(1, ListNode(2, null)));
-  });
-
-  test("test case 2", () {
-    ListNode head =
-        ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3, null)))));
-
-    Solution solution = Solution();
-
-    expect(solution.deleteDuplicates(head),
-        ListNode(1, ListNode(2, ListNode(3, null))));
-  });
 }

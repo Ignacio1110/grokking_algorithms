@@ -1,11 +1,16 @@
-import 'package:grokking_algorithms/grokking_algorithms.dart';
+import 'package:grokking_algorithms/leetcode/n912 Sort an Array.dart';
 import 'package:test/test.dart';
 
 void main() {
-  test('quick sort test', () {
-    expect(quickSort([7, 6, 5, 4, 3, 2, 1, 0]), [0, 1, 2, 3, 4, 5, 6, 7]);
-    expect(quickSort([2, 6, 5, 4, 3, 7, 1, 0]), [0, 1, 2, 3, 4, 5, 6, 7]);
+  //test case
+  test("test case 1", () {
+    Solution solution = Solution();
+    expect(
+        solution.sortArray([7, 6, 5, 4, 3, 2, 1, 0]), [0, 1, 2, 3, 4, 5, 6, 7]);
+    expect(
+        solution.sortArray([2, 6, 5, 4, 3, 7, 1, 0]), [0, 1, 2, 3, 4, 5, 6, 7]);
   });
+
   test('quick sort test2', () {
     var input = [
       15000,
@@ -60012,6 +60017,7 @@ void main() {
       29998,
       29999
     ];
-    expect(quickSort(input), expectOutput);
+    Solution solution = Solution();
+    expect(solution.sortArray(input), expectOutput);
   });
 }
